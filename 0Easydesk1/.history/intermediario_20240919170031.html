@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyDesk - Plano Intermediário</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="resources/icon/EasyDeskLogo.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left-section">
+                <div class="logo">
+                    <a href="intermediario.html"><img src="resources/icon/EasyDeskLogo.ico" alt="Logo EasyDesk"></a>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <div class="theme-toggle">
+                    <img src="resources/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+                </div>
+                <a href="selecioneplano.html"><button class="sign-out">Logout</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bem-vindo, (Nome).</h1>
+            <p>Aqui estão os serviços disponíveis para o Plano Intermediário:</p>
+        </section>
+        <section class="services-overview">
+            <div class="service-card">
+                <h2>Gerenciamento Avançado de Estoque</h2>
+                <p>Mantenha controle total e avançado sobre seus produtos com funcionalidades extras.</p>
+                <a href="#"><img src="resources\Captura de tela 2024-08-30 092309.png" alt="Gerenciamento Avançado de Estoque" width="200" height="auto"></a>
+            </div>
+            <div class="service-card">
+                <h2>Relatórios Semanais</h2>
+                <p>Receba relatórios detalhados semanalmente para melhor monitoramento das operações.</p>
+                <a href="#"><img src="resources\Captura de tela 2024-08-30 092309.png" alt="Relatórios Semanais" width="200" height="auto"></a>
+            </div>
+            <div class="service-card">
+                <h2>Suporte via Email e Chat</h2>
+                <p>Obtenha suporte rápido via email ou chat ao vivo para dúvidas e questões.</p>
+                <a href="#"><img src="resources\Captura de tela 2024-08-30 092309.png" alt="Suporte via Email e Chat" width="200" height="auto"></a>
+            </div>
+            <div class="service-card">
+                <h2>Notificações de Estoque Baixo</h2>
+                <p>Seja avisado quando o nível de estoque estiver abaixo do ideal.</p>
+                <a href="#"><img src="resources\Captura de tela 2024-08-30 092309.png" alt="Notificações de Estoque Baixo" width="200" height="auto"></a>
+            </div>
+            <div class="service-card">
+                <h2>Acesso a Relatórios Detalhados</h2>
+                <p>Visualize relatórios detalhados com análises profundas do desempenho do estoque.</p>
+                <a href="#"><img src="resources/relatorios_detalhados.png" alt="Relatórios Detalhados" width="200" height="auto"></a>
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+        if (!isLoggedIn || isLoggedIn !== 'true') {
+            alert('Você precisa fazer login primeiro!');
+            window.location.href = 'login.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

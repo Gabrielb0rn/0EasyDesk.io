@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="assets-adm\styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/igorescobar/jQuery-Mask-Plugin/master/src/jquery.mask.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="back-button">
+            <button onclick="history.back()"> < Voltar</button>
+        </div>
+        <div class="login-box">
+            <div class="logo">
+                <img src="resources\admin\logo-easydesk.png" alt="Logo EasyDesk">
+            </div>
+        <div class="administrador">
+            <h2>ADMINISTRADOR</h2>
+        </div>
+            <form>
+                <input type="email" placeholder="ID do administrador*" required>
+                <input type="password" placeholder="Senha*" required>
+                <input type="password" class="Verificador" placeholder="Verificador (6 digitos)*" name="Verificador" required>
+
+                <div class="remember-me">
+                    <div>
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Salvar dados de login</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="accept">
+                        <label for="accept">Concordo com os <a href="COLOCAR O LINK AQUI">termos do administrador</a></label>
+                    </div>
+                </div>
+                
+                <button type="submit">Login (admin)</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="assets-adm\script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+###
+
+GET http://localhost:3333/users
+
+###
+
+GET http://localhost:3333/users/aaa
+
+###
+
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "ORELHA",
+    "password": "12345",
+    "profile": "COMUM"
+}
+
+###
+
+PUT http://localhost:3333/users/999af5d0-3777-4e02-834d-9b582bc8de68
+Content-Type: application/json
+
+{
+    "name": "ORELHA",
+    "password": "123",
+    "profile": "ADM"
+}
+
+###
+
+DELETE http://localhost:3333/users/8cf1e65c-8c4a-4a74-b63b-dcc5ab1e0c12
