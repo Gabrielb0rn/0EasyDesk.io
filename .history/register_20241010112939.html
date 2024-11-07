@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - EasyDesk</title>
-    <link rel="stylesheet" href="assets\.css\components\register\register.css">
-    <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/register/style.css">
+    <link rel="shortcut icon" href="resources/icon/EasyDeskLogo.ico">
+    <style>
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #f9f9f9;
+            color:#000;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: #000;
+        }
+        .modal-body {
+            max-height: 400px;
+            overflow-y: auto;
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" class="back-link">&lt; Voltar</a>
     <div class="register-container">
         <div class="register-box">
-            <img src="assets\.css\favicon\EasyDeskLogo.ico" alt="Logo">
+            <img src="resources/icon/EasyDeskLogo.ico" alt="Logo">
             <h2>Crie sua conta</h2>
             <form id="register-form">
                 <input type="text" id="name" name="name" placeholder="Nome Completo" required>
@@ -60,6 +103,66 @@
         </div>
     </div>
 
-    <script src="assets\,js\modules\register\register.js"></script>
+    <script>
+        // Função para abrir e fechar o modal de Termos de Uso
+        const termsModal = document.getElementById('terms-modal');
+        const privacyModal = document.getElementById('privacy-modal');
+        const openTerms = document.getElementById('open-terms');
+        const openPrivacy = document.getElementById('open-privacy');
+        const closeTerms = document.getElementById('close-terms');
+        const closePrivacy = document.getElementById('close-privacy');
+
+        openTerms.onclick = function() {
+            termsModal.style.display = 'block';
+        };
+        openPrivacy.onclick = function() {
+            privacyModal.style.display = 'block';
+        };
+        closeTerms.onclick = function() {
+            termsModal.style.display = 'none';
+        };
+        closePrivacy.onclick = function() {
+            privacyModal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target === termsModal) {
+                termsModal.style.display = 'none';
+            } else if (event.target === privacyModal) {
+                privacyModal.style.display = 'none';
+            }
+        };
+
+        // Validação de formulário
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos inputs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Verifica se as senhas coincidem
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+
+            // Salva os dados no localStorage
+            const user = {
+                name: name,
+                email: email,
+                telefone: telefone,
+                password: password
+            };
+
+            localStorage.setItem('user', JSON.stringify(user));
+
+            alert('Usuário registrado com sucesso!');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
