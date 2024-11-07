@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// script.js inativo - botao branco
+// script.js s
 // document.addEventListener("DOMContentLoaded", function() {
 //     const navLinks = document.querySelectorAll('.nav-links a');
 
