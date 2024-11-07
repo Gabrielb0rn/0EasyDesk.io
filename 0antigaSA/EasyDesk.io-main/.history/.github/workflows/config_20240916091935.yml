@@ -1,0 +1,5 @@
+title: Meu Site
+description: Descrição do meu site
+baseurl: "" # Se estiver usando uma URL diferente do root, configure aqui
+url: "http://example.com" # Substitua pelo URL do seu site
+theme: jekyll-theme-primer

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyDesk - Plano Básico</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="resources/icon/EasyDeskLogo.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left-section">
+                <div class="logo">
+                    <a href="basico.html"><img src="resources/icon/EasyDeskLogo.ico" alt="Logo EasyDesk"></a>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <div class="theme-toggle">
+                    <img src="resources/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+                </div>
+                <a href="selecioneplano.html"><button class="sign-out">Logout</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bem-vindo ao Plano Básico</h1>
+        </section>
+        <p>Aqui estão os serviços disponíveis:</p>
+            <div class="hero-links">
+                <a href="#">Gerenciar Estoque</a>
+                <a href="#">Ver Relatórios Mensais</a>
+                <a href="#">Entrar em Contato com Suporte</a>
+            </div>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+        // Verifica se o usuário está logado, caso contrário redireciona para login.html
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+        if (!isLoggedIn || isLoggedIn !== 'true') {
+            alert('Você precisa fazer login primeiro!');
+            window.location.href = 'login.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

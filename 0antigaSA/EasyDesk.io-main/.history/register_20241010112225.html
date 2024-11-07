@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - EasyDesk</title>
+    <link rel="stylesheet" href="assets/register/style.css">
+    <link rel="shortcut icon" href="resources/icon/EasyDeskLogo.ico">
+    <style>
+        /* Estilo básico para o modal */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            color:#000000; 
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            animation: slideDown 0.4s ease;
+        }
+
+        .modal-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">&lt; Voltar</a>
+    <div class="register-container">
+        <div class="register-box">
+            <img src="resources/icon/EasyDeskLogo.ico" alt="Logo">
+            <h2>Crie sua conta</h2>
+            <form id="register-form">
+                <input type="text" id="name" name="name" placeholder="Nome Completo" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="telefone" class="Telefone" placeholder="Telefone" name="Telefone" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme a Senha" required>
+                <br><br>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Eu aceito os <span class="terms-text"></span></label>
+                    <div class="terms-container">
+                        <a href="#" id="openTerms">Termos de Uso</a><span> e </span><a href="#" id="openPrivacy">Política de Privacidade</a>
+                    </div>
+                </div>
+                <input type="submit" value="Registrar">
+            </form>
+            <a href="login.html">Já tem uma conta? Faça login</a>
+        </div>
+    </div>
+
+    <!-- Modal Termos de Uso -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTerms">&times;</span>
+            <div class="modal-header">Termos de Uso</div>
+            <h2><span style="color: rgb(68, 68, 68);">1. Termos</span></h2>
+            <p><span style="color: rgb(68, 68, 68);">Ao acessar ao site <a href="https://gabrielb0rn.github.io/EasyDesk.io/">EasyDesk.io</a>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.</span></p><h2><span style="color: rgb(68, 68, 68);">2. Uso de Licença</span></h2><p><span style="color: rgb(68, 68, 68);">É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site EasyDesk.io, apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:&nbsp;</span></p><ol><li><span style="color: rgb(68, 68, 68);">modificar ou copiar os materiais;&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial);&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">tentar descompilar ou fazer engenharia reversa de qualquer software contido no site EasyDesk.io;&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.</span></li></ol><p><span style="color: rgb(68, 68, 68);">Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida por EasyDesk.io a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrónico ou impresso.</span></p><h2><span style="color: rgb(68, 68, 68);">3. Isenção de responsabilidade</span></h2><ol><li><span style="color: rgb(68, 68, 68);">Os materiais no site da EasyDesk.io são fornecidos 'como estão'. EasyDesk.io não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.</span></li><li><span style="color: rgb(68, 68, 68);">Além disso, o EasyDesk.io não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.</span></li></ol><h2><span style="color: rgb(68, 68, 68);">4. Limitações</span></h2><p><span style="color: rgb(68, 68, 68);">Em nenhum caso o EasyDesk.io ou seus fornecedores serão responsáveis ​​por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais em EasyDesk.io, mesmo que EasyDesk.io ou um representante autorizado da EasyDesk.io tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos conseqüentes ou incidentais, essas limitações podem não se aplicar a você.</span></p><h2><span style="color: rgb(68, 68, 68);">5. Precisão dos materiais</span></h2><p><span style="color: rgb(68, 68, 68);">Os materiais exibidos no site da EasyDesk.io podem incluir erros técnicos, tipográficos ou fotográficos. EasyDesk.io não garante que qualquer material em seu site seja preciso, completo ou atual. EasyDesk.io pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, EasyDesk.io não se compromete a atualizar os materiais.</span></p><h2><span style="color: rgb(68, 68, 68);">6. Links</span></h2><p><span style="color: rgb(68, 68, 68);">O EasyDesk.io não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso por EasyDesk.io do site. O uso de qualquer site vinculado é por conta e risco do usuário.</span></p><p><br></p><h3><span style="color: rgb(68, 68, 68);">Modificações</span></h3><p><span style="color: rgb(68, 68, 68);">O EasyDesk.iopode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.</span></p><h3><span style="color: rgb(68, 68, 68);">Lei aplicável</span></h3><p><span style="color: rgb(68, 68, 68);">Estes termos e condições são regidos e interpretados de acordo com as leis do EasyDesk.io e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</span></p>
+        </div>
+    </div>
+
+    <!-- Modal Política de Privacidade -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePrivacy">&times;</span>
+            <div class="modal-header">Política de Privacidade</div>
+            <p>Aqui vai o conteúdo da Política de Privacidade...</p>
+        </div>
+    </div>
+
+    <script>
+        // Funções para controlar o modal dos Termos de Uso
+        var termsModal = document.getElementById("termsModal");
+        var termsLink = document.getElementById("openTerms");
+        var closeTerms = document.getElementById("closeTerms");
+
+        termsLink.onclick = function() {
+            termsModal.style.display = "block";
+        }
+
+        closeTerms.onclick = function() {
+            termsModal.style.display = "none";
+        }
+
+        // Funções para controlar o modal da Política de Privacidade
+        var privacyModal = document.getElementById("privacyModal");
+        var privacyLink = document.getElementById("openPrivacy");
+        var closePrivacy = document.getElementById("closePrivacy");
+
+        privacyLink.onclick = function() {
+            privacyModal.style.display = "block";
+        }
+
+        closePrivacy.onclick = function() {
+            privacyModal.style.display = "none";
+        }
+
+        // Fechar o modal se o usuário clicar fora da caixa de conteúdo
+        window.onclick = function(event) {
+            if (event.target == termsModal) {
+                termsModal.style.display = "none";
+            }
+            if (event.target == privacyModal) {
+                privacyModal.style.display = "none";
+            }
+        }
+
+        // Validação do formulário
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+
+            const user = {
+                name: name,
+                email: email,
+                telefone: telefone,
+                password: password
+            };
+
+            localStorage.setItem('user', JSON.stringify(user));
+
+            alert('Usuário registrado com sucesso!');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
