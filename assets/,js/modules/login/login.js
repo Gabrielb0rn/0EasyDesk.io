@@ -24,7 +24,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         // Armazena no sessionStorage que o usuário está logado
         sessionStorage.setItem('isLoggedIn', 'true');
         alert('Login bem-sucedido!');
-        window.location.href = 'poslogin.html';
+        window.location.href = '1poslogin.html';
     } else {
         alert('Email ou senha incorretos.');
     }
