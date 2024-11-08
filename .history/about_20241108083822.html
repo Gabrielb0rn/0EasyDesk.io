@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyDesk</title>
-    <link rel="stylesheet" href="assets\.css\components\about\about.css">
     <link rel="stylesheet" href="assets\.css\main.css">
     <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
 </head>
@@ -108,6 +107,27 @@
             </div>
         </section>
     </main>
-    <script src="assets\,js\main.js"></script>
+    <script>
+        function toggleTheme() {
+            // Alternar a classe 'dark-theme' no corpo do documento
+            document.body.classList.toggle('dark-theme');
+            
+            // Selecionar o ícone do tema
+            const themeIcon = document.getElementById('theme-icon');
+            
+            // Verificar se a classe 'dark-theme' está presente
+            if (document.body.classList.contains('dark-theme')) {
+                // Tema escuro: mostrar o sol
+                themeIcon.src = "assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg";
+                themeIcon.alt = "Mudar para o tema claro"; // Atualizar texto alternativo
+            } else {
+                // Tema claro: mostrar a lua
+                themeIcon.src = "assets/.css/icons/nav/moon-white-svgrepo-com (1).svg";
+                themeIcon.alt = "Mudar para o tema escuro"; // Atualizar texto alternativo
+            }
+        }
+        
+    </script>
+    <script src="assets\,js\scripts.js"></script>
 </body>
 </html>
