@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de tema */ 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #f0f0f0;
+    --link-color: #000000;
+    --link-hover-color: #6a11cb;
+    --button-bg: #dddddd;
+    --button-text-color: #000000;
+    --hero-bg-gradient: linear-gradient(135deg, #ab64a2, #537ec5); /* Atualizado */
+    --card-bg: #eeeeee;
+    --card-hover-color: #cccccc;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: white;
+    --header-bg: #1a1a1a;
+    --link-color: white;
+    --link-hover-color: #6a11cb;
+    --button-bg: #333;
+    --button-text-color: white;
+    --hero-bg-gradient: linear-gradient(to bottom, #6a11cb, #2575fc); /* Inalterado no modo escuro */
+    --card-bg: #444;
+    --card-hover-color: #555;
+    --theme-icon: 'resources/nav/moon-white-svgrepo-com (1).svg';
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilo do Header */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+}
+
+/* Seção esquerda contendo a logo e os links */
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo alinhada à esquerda */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Links de navegação à direita da logo */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 0;
+}
+
+/* Estilo dos itens de navegação */
+.nav-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo das imagens dos links */
+.nav-links img {
+    width: 24px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: filter 0.3s ease;
+}
+
+body.dark-theme .nav-links img {
+    filter: brightness(0) invert(1); /* Torna a imagem branca no modo escuro */
+}

@@ -268,14 +268,3 @@ body.dark-theme .theme-toggle img {
         padding: 12px;
     }
 }
-
-/* Seção específica para a página do plano básico */
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 40px;
-}

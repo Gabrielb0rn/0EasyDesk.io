@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Definir o container dos cards com flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que os cards quebrem em várias linhas */
+    justify-content: space-around; /* Espaço uniforme entre os cards */
+}
+
+.service-card {
+    width: 22%; /* Ajustar a largura dos cards para caberem 4 por linha */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    background-color: #f0f1f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Mapa do about */
+iframe{
+    border-radius:  10px;
+}

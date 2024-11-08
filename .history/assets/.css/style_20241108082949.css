@@ -1,0 +1,664 @@
+
+
+
+/* Estilo dos links */
+.nav-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Botões de autenticação */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.auth-buttons button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons .sign-in {
+    background-color: transparent;
+    border: 1px solid var(--button-text-color);
+}
+
+.auth-buttons button:hover {
+    background-color: var(--link-hover-color);
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--hero-bg-gradient);
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 18px;
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-links a:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Overview Section */
+.overview {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: var(--header-bg);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-color);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .hero-images img {
+        width: 150px;
+    }
+
+    .overview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo do botão de mudança de tema */
+.theme-toggle img {
+    margin-right: 15px;
+    margin-top: 8px;
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle img:hover {
+    transform: scale(1.1);
+}
+
+body.dark-theme .theme-toggle img {
+    filter: brightness(0) invert(1); /* Torna a imagem branca no modo escuro */
+}
+
+/* Seção Sobre Nós */
+.about-description {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--header-bg);
+}
+
+.about-description h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Seção Localização */
+.about-location {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-location h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Seção Paleta de Cores */
+.about-colors {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--card-bg);
+}
+
+.about-colors h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Nossa Equipe */
+.about-team {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-team h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.member {
+    width: 150px;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Seção de Planos */
+.plans {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+}
+
+.plans h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-color);
+}
+
+.plan-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.plan-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.plan-card .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plan-card button {
+    background-color: var(--link-hover-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan-card button:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Estilos Responsivos para os Planos */
+@media (max-width: 768px) {
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 90%;
+    }
+}
+
+/* Seção de Contato */
+.contact-us-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--header-bg);
+}
+
+.contact-us-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--card-hover-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+form button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Informações de Contato */
+.contact-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--header-bg);
+}
+
+.contact-info h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+
+/* Seção de serviços */
+.services-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--hero-bg-gradient);
+    color: var(--text-color);
+}
+
+.services-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.service-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-color);
+}
+
+.service-item h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Responsividade para serviços */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+}
+
+/* Estilo da página de contato */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--hero-bg-gradient); /* Degradê de fundo */
+    padding: 20px;
+}
+
+.contact-form-section {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-form-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--link-hover-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+.contact-form button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 20px;
+    }
+
+    .contact-form button {
+        padding: 12px;
+    }
+}
+
+
+/* Seção específica para a página do plano básico */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.services-overview {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: var(--header-bg);
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-color);
+}
+
+.service-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Definir o container dos cards com flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que os cards quebrem em várias linhas */
+    justify-content: space-around; /* Espaço uniforme entre os cards */
+}
+
+.service-card {
+    width: 22%; /* Ajustar a largura dos cards para caberem 4 por linha */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    background-color: #f0f1f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Mapa do about */
+iframe{
+    border-radius:  10px;
+}

@@ -257,25 +257,3 @@ body.dark-theme .nav-links img {
 body.dark-theme .theme-toggle img {
     filter: brightness(0) invert(1); /* Torna a imagem branca no modo escuro */
 }
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .contact-form-section {
-        padding: 20px;
-    }
-
-    .contact-form button {
-        padding: 12px;
-    }
-}
-
-/* Seção específica para a página do plano básico */
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 40px;
-}
