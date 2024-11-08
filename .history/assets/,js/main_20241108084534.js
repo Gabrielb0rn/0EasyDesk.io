@@ -141,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         displayProducts();
     }
-    
     function toggleTheme() {
         // Alterna a classe 'dark-theme' no body
         document.body.classList.toggle('dark-theme');

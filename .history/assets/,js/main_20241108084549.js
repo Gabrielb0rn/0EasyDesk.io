@@ -1,8 +1,3 @@
-// Função para alternar o tema
-function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     // Função para registrar novo usuário
     function registerUser(name, email, password) {
@@ -141,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         displayProducts();
     }
-    
+
     function toggleTheme() {
         // Alterna a classe 'dark-theme' no body
         document.body.classList.toggle('dark-theme');
