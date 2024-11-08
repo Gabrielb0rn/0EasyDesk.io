@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     applyTheme(); // Aplica o tema salvo ao carregar a página
 
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Função para registrar novo usuário
     function registerUser(name, email, password) {
