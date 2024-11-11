@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyDesk</title>
+    <link rel="stylesheet" href="assets\.css\main.css">
+    <link rel="stylesheet" href="assets\.css\components\product\product.css">
+    <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left-section">
+                <div class="logo">
+                    <a href="index.html"><img src="assets\.css\favicon\EasyDeskLogo.ico" alt="Logo EasyDesk"></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <img src="assets\.css\icons\nav\about-svgrepo-com.svg" alt="Sobre Nós">
+                        <a href="about.html">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\services-20px-svgrepo-com.svg" alt="Serviços">
+                        <a href="services.html">Serviços</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\prices-svgrepo-com.svg" alt="Preços / Planos">
+                        <a href="prices.html">Preços / Planos</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\shopping-bags-shopping-bag-svgrepo-com.svg" alt="Produtos">
+                        <a href="product.html">Produtos</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\contact-us-filled-svgrepo-com.svg" alt="Nos contate">
+                        <a href="contactus.html">Nos contate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <div class="theme-toggle">
+                    <img src="assets\.css\icons\nav\bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+                </div>
+                
+                <a href="login.html"><button class="sign-in">Login</button></a>
+                <a href="register.html"><button>Register</button></a>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Categorias</h3>
+            <ul>
+                <li data-category="recomendados" onclick="filterProducts('recomendados')">Recomendados</li>
+                <li data-category="monitores" onclick="filterProducts('monitores')">Monitores (3)</li>
+                <li data-category="mesas" onclick="filterProducts('mesas')">Mesas (3)</li>
+            </ul>
+        </aside>
+    </div>
+    <script src="assets\,js\modules\product\product.js"></script>
+    <script src="assets\,js\main.js"></script>
+</body>
+</html>

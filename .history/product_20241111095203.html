@@ -52,13 +52,13 @@
         <aside class="sidebar">
             <h3>Categorias</h3>
             <ul>
-                <li onclick="filterProducts('recomendados')">Recomendados</li>
-                <li onclick="filterProducts('monitores')">Monitores (3)</li>
-                <li onclick="filterProducts('mesas')">Mesas (3)</li>
+                <li data-category="recomendados" onclick="filterProducts('recomendados')">Recomendados</li>
+                <li data-category="monitores" onclick="filterProducts('monitores')">Monitores (3)</li>
+                <li data-category="mesas" onclick="filterProducts('mesas')">Mesas (3)</li>
             </ul>
         </aside>
-
-        <main>
+    </div>
+    <main>
         <section id="recomendados" class="product-section">
             <h2 class="section-title">Recomendados</h2>
             <div class="product-container">
@@ -84,7 +84,7 @@
                     <p class="product-price">R$ 99,99</p>
                 </div>
                 <div class="product-card" onclick="showProductDetails(this)">
-                    <img src="assets/images/product/monitor/monitor2.png" alt="Monitor 2" class="product-image">
+<img src="assets/images/product/monitor/monitor2.png" alt="Monitor 2" class="product-image">
                     <h2 class="product-title">Monitor 2</h2>
                     <p class="product-price">R$ 149,99</p>
                 </div>
@@ -125,9 +125,7 @@
             <button id="filter-price-button">Filtrar</button>
         </div>
     </main>
-        
-    </div>
     <script src="assets\,js\modules\product\product.js"></script>
-        <script src="assets\,js\main.js"></script>
+    <script src="assets\,js\main.js"></script>
 </body>
 </html>

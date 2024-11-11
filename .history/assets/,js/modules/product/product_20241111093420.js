@@ -1,18 +1,10 @@
 // Função para filtrar produtos por categoria
 function filterProducts(category) {
     const sections = document.querySelectorAll('.product-section');
-
-    // Esconde todas as seções
     sections.forEach(section => {
-        section.classList.add('hidden');
+        section.classList.add('hidden'); // Esconde todas as seções
     });
-
-    // Mostra a seção correspondente
-    const selectedSection = document.getElementById(category);
-    if (selectedSection) {
-        selectedSection.classList.remove('hidden');
-        selectedSection.classList.add('visible');
-    }
+    document.getElementById(category).classList.remove('hidden'); // Mostra a seção da categoria selecionada
 }
 
 // Função para mostrar os detalhes do produto
@@ -36,12 +28,12 @@ function showProductDetails(productCard) {
     // Adiciona produtos semelhantes (exemplo)
     similarProducts.innerHTML = `
         <div class="product-card" onclick="showProductDetails(this)">
-            <img src="assets/images/product/recomendados/recomendado1.png" alt="Produto Semelhante 1" class="product-image">
+            <img src="assets/.css/images/product/recomendados/recomendado1.png" alt="Produto Semelhante 1" class="product-image">
             <h2>Produto Semelhante 1</h2>
             <p>R$ 199,99</p>
         </div>
         <div class="product-card" onclick="showProductDetails(this)">
-            <img src="assets/images/product/recomendados/recomendado2.png" alt="Produto Semelhante 2" class="product-image">
+            <img src="assets/.css/images/product/recomendados/recomendado2.png" alt="Produto Semelhante 2" class="product-image">
             <h2>Produto Semelhante 2</h2>
             <p>R$ 249,99</p>
         </div>
@@ -58,6 +50,13 @@ function closeProductDetails() {
     document.getElementById('similar-products').innerHTML = ''; // Limpa os produtos semelhantes
 }
 
+// Adiciona eventos de clique para os botões de categoria
+document.querySelectorAll('.category-button').forEach(button => {
+    button.addEventListener('click', () => {
+        filterProducts(button.dataset.category); // Filtra produtos pela categoria
+    });
+});
+
 // Função para filtrar produtos por faixa de preço
 function filterByPrice() {
     const minPrice = parseFloat(document.getElementById('min-price').value) || 0;
@@ -67,40 +66,13 @@ function filterByPrice() {
     productCards.forEach(card => {
         const priceText = card.querySelector('.product-price').innerText.replace('R$ ', '').replace(',', '.');
         const price = parseFloat(priceText);
-
-        // Mostra ou esconde o card com base na faixa de preço
         if (price >= minPrice && price <= maxPrice) {
-            card.style.display = 'block';
+            card.style.display = 'block'; // Mostra o card se estiver dentro da faixa de preço
         } else {
-            card.style.display = 'none';
+            card.style.display = 'none'; // Esconde o card se não estiver dentro da faixa de preço
         }
     });
 }
 
 // Adiciona evento de clique para o botão de filtro de preço
-const filterPriceButton = document.getElementById('filter-price-button');
-if (filterPriceButton) {
-    filterPriceButton.addEventListener('click', filterByPrice);
-}
-
-// Adiciona eventos de clique para os botões de categoria
-document.querySelectorAll('[data-category]').forEach(button => {
-    button.addEventListener('click', () => {
-        filterProducts(button.getAttribute('data-category'));
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Adiciona eventos de clique para os botões de categoria
-    document.querySelectorAll('[data-category]').forEach(button => {
-        button.addEventListener('click', () => {
-            filterProducts(button.getAttribute('data-category'));
-        });
-    });
-
-    // Adiciona evento de clique para o botão de filtro de preço
-    const filterPriceButton = document.getElementById('filter-price-button');
-    if (filterPriceButton) {
-        filterPriceButton.addEventListener('click', filterByPrice);
-    }
-});
+document.getElementById('filter-price-button').addEventListener('click', filterByPrice);

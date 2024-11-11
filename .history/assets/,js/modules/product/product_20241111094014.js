@@ -1,17 +1,16 @@
 // Função para filtrar produtos por categoria
 function filterProducts(category) {
     const sections = document.querySelectorAll('.product-section');
-
+    
     // Esconde todas as seções
     sections.forEach(section => {
-        section.classList.add('hidden');
+        section.classList.add('hidden'); 
     });
 
-    // Mostra a seção correspondente
+    // Mostra a seção da categoria selecionada
     const selectedSection = document.getElementById(category);
     if (selectedSection) {
         selectedSection.classList.remove('hidden');
-        selectedSection.classList.add('visible');
     }
 }
 
@@ -88,19 +87,4 @@ document.querySelectorAll('[data-category]').forEach(button => {
     button.addEventListener('click', () => {
         filterProducts(button.getAttribute('data-category'));
     });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Adiciona eventos de clique para os botões de categoria
-    document.querySelectorAll('[data-category]').forEach(button => {
-        button.addEventListener('click', () => {
-            filterProducts(button.getAttribute('data-category'));
-        });
-    });
-
-    // Adiciona evento de clique para o botão de filtro de preço
-    const filterPriceButton = document.getElementById('filter-price-button');
-    if (filterPriceButton) {
-        filterPriceButton.addEventListener('click', filterByPrice);
-    }
 });

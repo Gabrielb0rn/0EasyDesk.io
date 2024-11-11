@@ -11,7 +11,7 @@ function filterProducts(category) {
     const selectedSection = document.getElementById(category);
     if (selectedSection) {
         selectedSection.classList.remove('hidden');
-        selectedSection.classList.add('visible');
+        selectedSection.classList.remove('hidden');
     }
 }
 
