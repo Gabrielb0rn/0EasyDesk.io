@@ -63,12 +63,12 @@
                 <h2 class="section-title">Recomendados</h2>
                 <div class="product-container">
                     <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/recomendados/recomendado1.png" alt="Produto Recomendado 1" class="product-image">
+                        <img src="assets/.css/images/product/recomendados/recomendado1.png" alt="Produto Recomendado 1" class="product-image">
                         <h2 class="product-title">Produto Recomendado 1</h2>
                         <p class="product-price">R$ 199,99</p>
                     </div>
                     <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/recomendados/recomendado2.png" alt="Produto Recomendado 2" class="product-image">
+                        <img src="assets/.css/images/product/recomendados/recomendado2.png" alt="Produto Recomendado 2" class="product-image">
                         <h2 class="product-title">Produto Recomendado 2</h2>
                         <p class="product-price">R$ 249,99</p>
                     </div>
@@ -77,16 +77,11 @@
             
             <section id="monitores" class="product-section hidden">
                 <h2 class="section-title">Monitores</h2>
-                <div class="product-container">
+                <div class="products-container">
                     <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/monitor/monitor1.png" alt="Monitor 1" class="product-image">
+                        <img src="assets/css/images/product/monitor/monitor1.png" alt="Monitor 1" class="product-image">
                         <h2 class="product-title">Monitor 1</h2>
                         <p class="product-price">R$ 99,99</p>
-                    </div>
-                    <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/monitor/monitor2.png" alt="Monitor 2" class="product-image">
-                        <h2 class="product-title">Monitor 2</h2>
-                        <p class="product-price">R$ 149,99</p>
                     </div>
                     <!-- Adicione mais produtos aqui -->
                 </div>
@@ -96,33 +91,19 @@
                 <h2 class="section-title">Mesas</h2>
                 <div class="product-container">
                     <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/mesa/mesa1.png" alt="Mesa 1" class="product-image">
+                        <img src="assets/.css/images/product/mesa/mesa1.png" alt="Mesa 1" class="product-image">
                         <h2 class="product-title">Mesa 1</h2>
                         <p class="product-price">R$ 299,99</p>
-                    </div>
-                    <div class="product-card" onclick="showProductDetails(this)">
-                        <img src="assets/images/product/mesa/mesa2.png" alt="Mesa 2" class="product-image">
-                        <h2 class="product-title">Mesa 2</h2>
-                        <p class="product-price">R$ 349,99</p>
                     </div>
                     <!-- Adicione mais produtos aqui -->
                 </div>
             </section>
-    
+        
             <div id="product-details" class="hidden">
                 <button onclick="closeProductDetails()">Fechar</button>
                 <div id="details-content"></div>
                 <h3>Produtos Semelhantes</h3>
                 <div id="similar-products"></div>
-            </div>
-    
-            <div id="price-filter">
-                <h3>Filtrar por Preço</h3>
-                <label for="min-price">Preço Mínimo:</label>
-                <input type="number" id="min-price" placeholder="0">
-                <label for="max-price">Preço Máximo:</label>
-                <input type="number" id="max-price" placeholder="9999">
-                <button id="filter-price-button">Filtrar</button>
             </div>
         </main>
         
