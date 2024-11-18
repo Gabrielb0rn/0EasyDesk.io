@@ -28,7 +28,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         sessionStorage.setItem('userRole', storedPredefinedUser.email === email ? 'admin' : 'user');
 
         alert('Login bem-sucedido!');
-        window.location.href = 'admin.html';
+        window.location.href = 'product.html';
     } else {
         alert('Email ou senha incorretos.');
     }

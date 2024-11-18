@@ -174,3 +174,15 @@ function logout() {
     `;
 }
 
+// Simulando a obtenção do papel do usuário. Em um cenário real, isso pode vir de um cookie ou de uma API.
+const userRole = "user"; // Mude para "admin" para testar o acesso.
+
+// Verifica se o usuário tem o papel de admin
+if (userRole !== "admin") {
+    document.body.innerHTML = "<h1>Sem acesso!</h1>";
+    // Ou redirecionar para outra página, por exemplo:
+    // window.location.href = "index.html"; // Redireciona para a página inicial
+} else {
+    // Código da página admin aqui
+    document.body.innerHTML = "<h1>Bem-vindo à página Admin!</h1>";
+    // Co

@@ -52,7 +52,45 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'index.html';
         }
     }
-    
+
+    // Função para salvar produto
+    function saveProduct(name, description, price, quantity) {
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        let existingProductIndex = products.findIndex(product => product.name === name);
+        if (existingProductIndex !== -1) {
+            // Atualiza produto existente
+            products[existingProductIndex] = { ...products[existingProductIndex], description, price, quantity };
+        } else {
+            // Adiciona novo produto
+            let product = { id: Date.now(), name, description, price, quantity };
+            products.push(product);
+        }
+        localStorage.setItem('products', JSON.stringify(products));
+    }
+
+    // Função para editar produto
+    function editProduct(id, name, description, price, quantity) {
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        let productIndex = products.findIndex(product => product.id === id);
+        if (productIndex !== -1) {
+            products[productIndex] = { id, name, description, price, quantity };
+            localStorage.setItem('products', JSON.stringify(products));
+        }
+    }
+
+    // Função para excluir produto
+    function deleteProduct(id) {
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        products = products.filter(product => product.id !== id);
+        localStorage.setItem('products', JSON.stringify(products));
+    }
+
+    // Função para listar produtos
+    function listProducts() {
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        return products;
+    }
+
     // Adicionar usuário admin
     function addAdminUser() {
         let users = JSON.parse(localStorage.getItem('users')) || [];
@@ -130,6 +168,30 @@ document.addEventListener('DOMContentLoaded', function() {
         displayProducts();
     }
     
+    function toggleTheme() {
+        // Alterna a classe 'dark-theme' no body
+        document.body.classList.toggle('dark-theme');
+    
+        // Verifica se o tema dark está ativado e armazena isso no localStorage
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    
+    // Função para aplicar o tema salvo no localStorage ao carregar a página
+    function applyTheme() {
+        // Verifica o valor armazenado no localStorage
+        const savedTheme = localStorage.getItem('theme');
+    
+        // Se o tema salvo for 'dark', aplica a classe 'dark-theme' no body
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+        }
+    }
 });
 
 // Ajusta a navbar dinamicamente com base no status de login
@@ -139,16 +201,11 @@ const userRole = sessionStorage.getItem('userRole');
 
 if (isLoggedIn === 'true') {
     if (userRole === 'admin') {
-        console.log('Exibindo ícone de admin...');
         authSection.innerHTML = `
-        <div class="theme-toggle">
-        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
-        </div>
-            <div class="nav-links">
-                <img src="assets/.css/icons/admin/crown-svgrepo-com.svg" alt="Admin" width="24px" height="auto">
+            <div class="admin-icon">
+                <img src="assets/icons/nav/crown.svg" alt="Admin">
             </div>
-            <button class="logout" onclick="logout()">Logout</button>
-            `;
+        `;
     } else {
         authSection.innerHTML = `
             <button class="logout" onclick="logout()">Logout</button>
@@ -156,9 +213,6 @@ if (isLoggedIn === 'true') {
     }
 } else {
     authSection.innerHTML = `
-        <div class="theme-toggle">
-        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
-        </div>
         <a href="login.html"><button class="sign-in">Login</button></a>
         <a href="register.html"><button>Register</button></a>
     `;
@@ -167,10 +221,5 @@ if (isLoggedIn === 'true') {
 function logout() {
     sessionStorage.clear();
     alert('Você saiu.');
-    window.location.href = 'product.html';
-    authSection.innerHTML = `
-        <a href="login.html"><button class="sign-in">Login</button></a>
-        <a href="register.html"><button>Register</button></a>
-    `;
+    window.location.href = 'index.html';
 }
-

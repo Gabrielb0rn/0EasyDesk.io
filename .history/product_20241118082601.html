@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyDesk</title>
     <link rel="stylesheet" href="assets\.css\main.css">
+    <link rel="stylesheet" href="assets\.css\components\product\product.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
 </head>
 <body>
@@ -48,32 +50,15 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>EasyDesk</h1>
-            <p>Organize seu estoque sem burocracia.</p>
-        </section>
-        <section class="overview">
-            <div class="card">
-                <h2>Tela 01</h2>
-                <p>OVERVIEW</p>
-                <p>Página principal</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
-            </div>
-            <div class="card">
-                <h2>Tela 02</h2>
-                <p>ESTOQUE</p>
-                <p>Página de gerenciamento de estoque</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
-            </div>
-            <div class="card">
-                <h2>Tela 03</h2>
-                <p>EVENTOS</p>
-                <p>Página de gestão de eventos</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
-            </div>
-        </section>
+        <div id="produtos">
+            <h2>Produtos Cadastrados</h2>
+            <ul id="listaProdutos"></ul>
+        </div>   
     </main>
-    <script src="assets/,js/main.js"></script>   
+        
+    </div>
+    <script src="assets\,js\modules\cadastro-produto\index.js"></script>
+    <script src="assets\,js\modules\product\product.js"></script>
+        <script src="assets\,js\main.js"></script>
 </body>
 </html>
-

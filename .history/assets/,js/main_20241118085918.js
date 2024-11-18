@@ -144,7 +144,7 @@ if (isLoggedIn === 'true') {
         <div class="theme-toggle">
         <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
         </div>
-            <div class="nav-links">
+            <div class="nav-links">>
                 <img src="assets/.css/icons/admin/crown-svgrepo-com.svg" alt="Admin" width="24px" height="auto">
             </div>
             <button class="logout" onclick="logout()">Logout</button>
@@ -173,4 +173,3 @@ function logout() {
         <a href="register.html"><button>Register</button></a>
     `;
 }
-

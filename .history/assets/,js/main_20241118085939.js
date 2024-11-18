@@ -173,4 +173,3 @@ function logout() {
         <a href="register.html"><button>Register</button></a>
     `;
 }
-

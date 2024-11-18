@@ -141,10 +141,7 @@ if (isLoggedIn === 'true') {
     if (userRole === 'admin') {
         console.log('Exibindo ícone de admin...');
         authSection.innerHTML = `
-        <div class="theme-toggle">
-        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
-        </div>
-            <div class="nav-links">
+            <div class="admin-icon">
                 <img src="assets/.css/icons/admin/crown-svgrepo-com.svg" alt="Admin" width="24px" height="auto">
             </div>
             <button class="logout" onclick="logout()">Logout</button>
@@ -156,9 +153,6 @@ if (isLoggedIn === 'true') {
     }
 } else {
     authSection.innerHTML = `
-        <div class="theme-toggle">
-        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
-        </div>
         <a href="login.html"><button class="sign-in">Login</button></a>
         <a href="register.html"><button>Register</button></a>
     `;
@@ -173,4 +167,3 @@ function logout() {
         <a href="register.html"><button>Register</button></a>
     `;
 }
-
