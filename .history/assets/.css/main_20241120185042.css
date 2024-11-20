@@ -14,7 +14,7 @@
     --link-hover-color: #6a11cb;
     --button-bg: #dddddd;
     --button-text-color: #000000;
-    --hero-bg-gradient: linear-gradient(135deg, #ab64a2, #537ec5); /* Atualizado */
+    #--hero-bg-gradient: linear-gradient(135deg, #ab64a2, #537ec5); /* Atualizado */
     --card-bg: #eeeeee;
     --card-hover-color: #cccccc;
 }
@@ -27,7 +27,7 @@ body.dark-theme {
     --link-hover-color: #6a11cb;
     --button-bg: #333;
     --button-text-color: white;
-    --hero-bg-gradient: linear-gradient(to bottom, #6a11cb, #2575fc); /* Inalterado no modo escuro */
+    #--hero-bg-gradient: linear-gradient(to bottom, #6a11cb, #2575fc); /* Inalterado no modo escuro */
     --card-bg: #444;
     --card-hover-color: #555;
     --theme-icon: 'resources/nav/moon-white-svgrepo-com (1).svg';
