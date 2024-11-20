@@ -174,32 +174,3 @@ function logout() {
     `;
 }
 
-//função para fazer as particulas bonitinhas 
-
-const container = document.querySelector('.hero');
-
-container.addEventListener('mousemove', (e) => {
-    createParticle(e.clientX, e.clientY);
-});
-
-function createParticle(x, y) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-
-    particle.style.left = `${x - 5}px`; 
-    particle.style.top = `${y - 5}px`;
-
-    const angle = Math.random() * 2 * Math.PI;  
-    const distance = Math.random() * 50 + 30; 
-    const xOffset = Math.cos(angle) * distance;
-    const yOffset = Math.sin(angle) * distance;
-
-    particle.style.setProperty('--x', `${xOffset}px`);
-    particle.style.setProperty('--y', `${yOffset}px`);
-
-    container.appendChild(particle);
-
-    setTimeout(() => {
-        particle.remove();
-    }, 1000);  
-}

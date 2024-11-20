@@ -279,20 +279,3 @@ body.dark-theme .theme-toggle img {
     font-size: 22px;
     margin-bottom: 40px;
 }
-
-.particle {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #40ffff;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: particle-move 1s forwards;
-}
-
-@keyframes particle-move {
-    to {
-        transform: translate(var(--x), var(--y));
-        opacity: 0;
-    }
-}
