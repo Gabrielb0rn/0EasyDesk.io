@@ -13,22 +13,21 @@ function exibirProduto() {
     for (let produto of produtos) {
         // 5. Cria um elemento <li> que servirá como o card do produto
         const li = document.createElement('li');
-        li.classList.add('product-card'); // Adiciona uma classe para aplicar o estilo de card
+        li.classList.add('produto-item'); // Adiciona uma classe para aplicar o estilo de card
 
         // 6. Cria um elemento <img> para exibir a imagem do produto e define o src e o texto alternativo (alt)
         const img = document.createElement('img');
         img.src = produto.urlImage; // Define a URL da imagem do produto
         img.alt = produto.nome; // Define o nome do produto como texto alternativo da imagem
-        img.classList.add('product-image'); // Classe para aplicar o estilo da imagem
+        img.classList.add('produto-img'); // Classe para aplicar o estilo da imagem
 
         // 7. Cria um parágrafo <p> para exibir o nome do produto
-        const nome = document.createElement('h2');
+        const nome = document.createElement('p');
         nome.textContent = produto.nome; // Define o texto como o nome do produto
 
         // 8. Cria um parágrafo <p> para exibir o preço do produto, adicionando a palavra "Preço:"
         const preco = document.createElement('p');
         preco.innerHTML = `<span>Preço:</span> R$${produto.preco}`; // Define o texto como "Preço: R$" seguido pelo valor
-
 
         // 9. Cria um parágrafo <p> para exibir a descrição do produto, com a palavra "Descrição:"
         const descricao = document.createElement('p');

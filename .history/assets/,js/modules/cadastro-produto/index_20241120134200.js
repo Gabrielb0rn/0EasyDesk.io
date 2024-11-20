@@ -29,7 +29,6 @@ function exibirProduto() {
         const preco = document.createElement('p');
         preco.innerHTML = `<span>Preço:</span> R$${produto.preco}`; // Define o texto como "Preço: R$" seguido pelo valor
 
-
         // 9. Cria um parágrafo <p> para exibir a descrição do produto, com a palavra "Descrição:"
         const descricao = document.createElement('p');
         descricao.innerHTML = `<span>Descrição:</span> ${produto.descricao}`; // Define o texto como "Descrição:" seguido pela descrição
