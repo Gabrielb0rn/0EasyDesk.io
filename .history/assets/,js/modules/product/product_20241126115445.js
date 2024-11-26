@@ -74,4 +74,3 @@ document.addEventListener("DOMContentLoaded", () => {
       cartSidebar.classList.remove("open");
     });
   });
-  

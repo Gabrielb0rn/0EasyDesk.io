@@ -55,23 +55,3 @@ document.querySelector('.checkout').addEventListener('click', () => {
     updateCart();
   }
 });
-
-
-// ----
-
-document.addEventListener("DOMContentLoaded", () => {
-    const cartIcon = document.getElementById("cart-icon");
-    const cartSidebar = document.getElementById("cart-sidebar");
-    const closeCart = document.getElementById("close-cart");
-  
-    // Abrir o carrinho
-    cartIcon.addEventListener("click", () => {
-      cartSidebar.classList.add("open");
-    });
-  
-    // Fechar o carrinho
-    closeCart.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-    });
-  });
-  

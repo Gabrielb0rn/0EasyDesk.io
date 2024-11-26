@@ -127,14 +127,14 @@
   }
 
   /* Estilo do ícone */
-/* .cart-icon {
+.cart-icon {
     position: fixed;
     top: 20px;
     right: 20px;
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
-  } */
+  }
   
   /* Tela deslizante inicial (oculta) */
   .cart-sidebar {

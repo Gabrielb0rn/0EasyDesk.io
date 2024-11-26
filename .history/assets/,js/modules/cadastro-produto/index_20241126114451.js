@@ -86,17 +86,14 @@ function exibirProduto() {
     const listaProdutos = document.getElementById('listaProdutos');
     listaProdutos.innerHTML = '';
 
-    produtos.forEach((produto, index) => {
+    produtos.forEach(produto => {
         const li = document.createElement('li');
-        li.classList.add('product-card');
-        li.dataset.id = index; // Armazena o índice como identificador
-        li.dataset.name = produto.nome;
-        li.dataset.price = produto.preco;
+        li.classList.add('product-card'); // Use esta classe no CSS para estilizar os cards
 
         const img = document.createElement('img');
         img.src = produto.urlImage;
         img.alt = produto.nome;
-        img.classList.add('product-image');
+        img.classList.add('product-image'); // Adicione essa classe para estilizar imagens no CSS
 
         const nome = document.createElement('h2');
         nome.textContent = produto.nome;
@@ -107,32 +104,13 @@ function exibirProduto() {
         const descricao = document.createElement('p');
         descricao.innerHTML = `<strong>Descrição:</strong> ${produto.descricao}`;
 
-        // Botão "Adicionar ao carrinho"
-        const addToCartButton = document.createElement('button');
-        addToCartButton.textContent = 'Adicionar ao carrinho';
-        addToCartButton.classList.add('add-to-cart');
-        addToCartButton.addEventListener('click', () => {
-            adicionarAoCarrinho(produto, index);
-        });
-
-        // Adiciona os elementos ao card
         li.appendChild(img);
         li.appendChild(nome);
         li.appendChild(preco);
         li.appendChild(descricao);
-        li.appendChild(addToCartButton);
 
         listaProdutos.appendChild(li);
     });
 }
 
-// Função para adicionar produtos ao carrinho
-function adicionarAoCarrinho(produto, index) {
-    const existingItem = cart.find(item => item.id === index);
-    if (existingItem) {
-        existingItem.quantity++;
-    } else {
-        cart.push({ id: index, name: produto.nome, price: parseFloat(produto.preco), quantity: 1 });
-    }
-    updateCart();
-}
+window.onload = exibirProduto;

@@ -74,4 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
       cartSidebar.classList.remove("open");
     });
   });
-  
+
+  document.querySelector('.checkout').addEventListener('click', () => {
+    if (cart.length === 0) {
+        alert('O carrinho está vazio!');
+    } else {
+        alert('Compra finalizada com sucesso!');
+        cart = [];
+        updateCart();
+    }
+});
