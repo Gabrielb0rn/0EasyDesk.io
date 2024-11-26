@@ -204,7 +204,7 @@ function createParticle(x, y) {
     }, 1000);  
 }
 
-// NAV Ativo
+
 // Obter a URL atual
 const currentPath = window.location.pathname;
 

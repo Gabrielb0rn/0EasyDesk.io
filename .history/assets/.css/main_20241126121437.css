@@ -75,16 +75,6 @@ header nav {
     margin-left: 0;
 }
 
-.nav-links a.active {
-    font-weight: bold; /* Exemplo: destaque com negrito */
-    color: var(--link-hover-color); /* Altere a cor */
-    text-decoration: underline; /* Opcional */
-}
-
-.nav-links img.active {
-    filter: brightness(1.5); /* Torna a imagem mais destacada */
-}
-
 /* Estilo dos itens de navegação */
 .nav-links li {
     display: flex;
