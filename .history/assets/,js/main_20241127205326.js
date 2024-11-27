@@ -157,9 +157,7 @@ if (isLoggedIn === 'true') {
         }
     } else {
         authSection.innerHTML = `
-        <div class="theme-toggle">
-            <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
-        </div>
+        v
             <button class="logout" onclick="logout()">Logout</button>
         `;
         if (adminIcon) {
