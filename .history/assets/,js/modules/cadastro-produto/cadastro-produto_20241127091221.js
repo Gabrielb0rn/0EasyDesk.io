@@ -117,7 +117,7 @@ function exibirProdutos() {
         info.classList.add('product-info');
         info.innerHTML = `
             <h3>${produto.nome}</h3>
-            <p class="product-price">R$${produto.preco}</p>
+            <p><strong>Preço:</strong> R$${produto.preco}</p>
             <p><strong>Descrição:</strong> ${produto.descricao}</p>
         `;
 
