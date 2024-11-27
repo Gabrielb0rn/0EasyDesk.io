@@ -1,0 +1,6 @@
+<style>
+    /* Oculta todo o corpo até que a validação termine */
+    body {
+        display: none;
+    }
+</style>
