@@ -137,43 +137,31 @@ const authSection = document.getElementById('auth-section');
 const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 const userRole = sessionStorage.getItem('userRole');
 
-// Encontra o ícone de admin no DOM
-const adminIcon = document.getElementById('admin-icon');
-
 if (isLoggedIn === 'true') {
     if (userRole === 'admin') {
         console.log('Exibindo ícone de admin...');
         authSection.innerHTML = `
         <div class="theme-toggle">
-            <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
         </div>
-        <div class="nav-links">
-            <img src="assets/.css/icons/admin/crown-svgrepo-com.svg" alt="Admin" width="24px" height="auto" id="admin-icon">
-        </div>
-        <button class="logout" onclick="logout()">Logout</button>
-        `;
-        if (adminIcon) {
-            adminIcon.style.display = 'block'; // Exibe o ícone de administrador
-        }
+            <div class="nav-links">
+                <img src="assets/.css/icons/admin/crown-svgrepo-com.svg" alt="Admin" width="24px" height="auto">
+            </div>
+            <button class="logout" onclick="logout()">Logout</button>
+            `;
     } else {
         authSection.innerHTML = `
             <button class="logout" onclick="logout()">Logout</button>
         `;
-        if (adminIcon) {
-            adminIcon.style.display = 'none'; // Caso contrário, esconde o ícone
-        }
     }
 } else {
     authSection.innerHTML = `
         <div class="theme-toggle">
-            <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+        <img src="assets/.css/icons/nav/bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
         </div>
         <a href="login.html"><button class="sign-in">Login</button></a>
         <a href="register.html"><button>Register</button></a>
     `;
-    if (adminIcon) {
-        adminIcon.style.display = 'none'; // Esconde o ícone se não estiver logado
-    }
 }
 
 function logout() {
@@ -184,11 +172,7 @@ function logout() {
         <a href="login.html"><button class="sign-in">Login</button></a>
         <a href="register.html"><button>Register</button></a>
     `;
-    if (adminIcon) {
-        adminIcon.style.display = 'none'; // Esconde o ícone ao sair
-    }
 }
-
 
 //função para fazer as particulas bonitinhas 
 
