@@ -129,13 +129,11 @@
   /* Estilo do ícone */
 .cart-icon {
     position: fixed;
-    top: 80x;
-    left: 20px;
+    top: 20px;
+    right: 20px;
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
-    border-radius: 10px;
-    background:rgba(0, 0, 0, 0.1);
   }
   
   /* Tela deslizante inicial (oculta) */

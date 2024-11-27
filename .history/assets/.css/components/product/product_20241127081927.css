@@ -134,8 +134,7 @@
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
-    border-radius: 10px;
-    background:rgba(0, 0, 0, 0.1);
+    border-radius: 1
   }
   
   /* Tela deslizante inicial (oculta) */

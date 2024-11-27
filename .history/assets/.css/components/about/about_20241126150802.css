@@ -83,13 +83,13 @@
 }
 
 .member {
-    width: 200px;
+    width: 150px;
     text-align: center;
 }
 
 .member img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;

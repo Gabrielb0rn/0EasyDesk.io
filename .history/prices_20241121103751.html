@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyDesk</title>
+    <title>Planos - EasyDesk</title>
     <link rel="stylesheet" href="assets\.css\main.css">
+    <link rel="stylesheet" href="assets\.css\components\prices\prices.css">
     <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
 </head>
 <body>
@@ -37,7 +38,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="auth-buttons" id="auth-section">
+            <div class="auth-buttons">
                 <div class="theme-toggle">
                     <img src="assets\.css\icons\nav\bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
                 </div>
@@ -48,32 +49,36 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>EasyDesk</h1>
-            <p>Organize seu estoque sem burocracia.</p>
-        </section>
-        <section class="overview">
-            <div class="card">
-                <h2>Tela 01</h2>
-                <p>OVERVIEW</p>
-                <p>Página principal</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
-            </div>
-            <div class="card">
-                <h2>Tela 02</h2>
-                <p>ESTOQUE</p>
-                <p>Página de gerenciamento de estoque</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
-            </div>
-            <div class="card">
-                <h2>Tela 03</h2>
-                <p>EVENTOS</p>
-                <p>Página de gestão de eventos</p>
-                <img src="assets\.css\images\prévia\teste.png" alt="teste" width="200" height="auto">
+        <section class="plans">
+            <h1>Nossos Planos</h1>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h2>Básico</h2>
+                    <p>Acesso a funções essenciais de gerenciamento de estoque.</p>
+                    <p class="price">R$ 49/mês</p>
+                    <button>Assinar</button>
+                </div>
+                <div class="plan-card">
+                    <h2>Intermediário</h2>
+                    <p>Ferramentas avançadas de automação e controle de inventário.</p>
+                    <p class="price">R$ 99/mês</p>
+                    <button>Assinar</button>
+                </div>
+                <div class="plan-card">
+                    <h2>Premium</h2>
+                    <p>Gestão integrada com equipe e relatórios detalhados.</p>
+                    <p class="price">R$ 199/mês</p>
+                    <button>Assinar</button>
+                </div>
+                <div class="plan-card">
+                    <h2>Corporativo</h2>
+                    <p>Soluções personalizadas para grandes empresas.</p>
+                    <p class="price">R$ 499/mês</p>
+                    <button>Assinar</button>
+                </div>
             </div>
         </section>
     </main>
-    <script src="assets/,js/main.js"></script>   
+    <script src="assets\,js\main.js"></script>
 </body>
 </html>
-
