@@ -1,25 +1,39 @@
 function toggleTheme() {
-    // Alterna a classe 'dark-theme' no body
     document.body.classList.toggle('dark-theme');
 
-    // Verifica se o tema dark está ativado e armazena isso no localStorage
-    if (document.body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartTotalWrapper = document.querySelector('.cart-total-wrapper');
+    const checkoutButton = document.querySelector('.checkout');
+
+
+    if (checkoutButton) {
+        checkoutButton.classList.toggle('dark-theme');
     }
+    if (cartSidebar) {
+        cartSidebar.classList.toggle('dark-theme');
+    }
+
+    if (cartTotalWrapper) {
+        cartTotalWrapper.classList.toggle('dark-theme');
+    }
+
+    // Salvar tema no localStorage
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
 }
 
-// Função para aplicar o tema salvo no localStorage ao carregar a página
 function applyTheme() {
-    // Verifica o valor armazenado no localStorage
     const savedTheme = localStorage.getItem('theme');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartTotalWrapper = document.querySelector('.cart-total-wrapper');
 
-    // Se o tema salvo for 'dark', aplica a classe 'dark-theme' no body
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
+        if (cartSidebar) cartSidebar.classList.add('dark-theme');
+        if (cartTotalWrapper) cartTotalWrapper.classList.add('dark-theme');
     } else {
         document.body.classList.remove('dark-theme');
+        if (cartSidebar) cartSidebar.classList.remove('dark-theme');
+        if (cartTotalWrapper) cartTotalWrapper.classList.remove('dark-theme');
     }
 }
 
@@ -198,18 +212,21 @@ function logout() {
 const container = document.querySelector('.hero');
 
 container.addEventListener('mousemove', (e) => {
-    createParticle(e.clientX, e.clientY);
+    const x = e.clientX + window.scrollX;
+    const y = e.clientY + window.scrollY;
+    createParticle(x, y);
 });
 
 function createParticle(x, y) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
 
+    
     particle.style.left = `${x - 5}px`; 
     particle.style.top = `${y - 5}px`;
 
     const angle = Math.random() * 2 * Math.PI;  
-    const distance = Math.random() * 50 + 30; 
+    const distance = Math.random() * 50 + 30;  
     const xOffset = Math.cos(angle) * distance;
     const yOffset = Math.sin(angle) * distance;
 
@@ -218,10 +235,12 @@ function createParticle(x, y) {
 
     container.appendChild(particle);
 
+    // Remove a partícula após 1 segundo
     setTimeout(() => {
         particle.remove();
     }, 1000);  
 }
+
 
 // NAV Ativo
 // Obter a URL atual

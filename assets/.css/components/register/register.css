@@ -2,6 +2,7 @@
 body {
     background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Container principal de registro */
@@ -89,9 +90,13 @@ body {
 /* Link de voltar */
 .back-link {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     top: 20px;
     left: 20px;
-    padding: 10px 20px;
+    padding: 2px 23px;
     background-color: #333;
     color: white;
     text-decoration: none;
@@ -99,9 +104,8 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
-.back-link:hover {
-    background-color: #8C84B3;
+.back-link,h3{
+    margin-right: 5px;
 }
 
 /* Container de checkbox e termos */

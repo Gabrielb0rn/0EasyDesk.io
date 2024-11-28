@@ -126,6 +126,8 @@ form button:hover {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;

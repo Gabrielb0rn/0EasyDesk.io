@@ -6,7 +6,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 
 // Array para armazenar os itens do carrinho
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Função para adicionar produto ao carrinho
 products.forEach(product => {
@@ -43,6 +43,9 @@ function updateCart() {
   });
 
   cartTotal.textContent = total.toFixed(2);
+
+  // Salva o carrinho atualizado no localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 // Evento para finalizar compra
@@ -56,22 +59,34 @@ document.querySelector('.checkout').addEventListener('click', () => {
   }
 });
 
+// Carrega o carrinho ao iniciar a página
+function loadCart() {
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} - R$${item.price.toFixed(2)} x ${item.quantity}`;
+    cartItems.appendChild(li);
+  });
 
-// ----
+  // Atualiza o total
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  cartTotal.textContent = total.toFixed(2);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-    const cartIcon = document.getElementById("cart-icon");
-    const cartSidebar = document.getElementById("cart-sidebar");
-    const closeCart = document.getElementById("close-cart");
-  
-    // Abrir o carrinho
-    cartIcon.addEventListener("click", () => {
-      cartSidebar.classList.add("open");
-    });
-  
-    // Fechar o carrinho
-    closeCart.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-    });
+  const cartIcon = document.getElementById("cart-icon");
+  const cartSidebar = document.getElementById("cart-sidebar");
+  const closeCart = document.getElementById("close-cart");
+
+  // Abrir o carrinho
+  cartIcon.addEventListener("click", () => {
+    cartSidebar.classList.add("open");
   });
-  
+
+  // Fechar o carrinho
+  closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("open");
+  });
+
+  // Carregar o carrinho do localStorage ao carregar a página
+  loadCart();
+});
