@@ -1,0 +1,114 @@
+/* Tela de carregamento */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f1f2; /* Tom neutro para o fundo */
+    color: #565aa6; /* Cor destacada para o texto */
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    background-color: #ffffff; /* Cor de fundo padrão */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para os botões */
+button {
+    background-color: #565aa6; /* Cor primária do botão */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c84b3; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+button:active {
+    background-color: #1c3059; /* Cor ao clicar */
+    transform: scale(1); /* Reduz o zoom */
+}
+
+/* Inputs de texto */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #565aa6;
+    outline: none;
+}
+
+/* Área de produtos cadastrados */
+#produtos {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#produtos h2 {
+    color: #1c3059;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Lista de produtos */
+#listaProdutos {
+    list-style: none;
+    padding: 0;
+}
+
+#listaProdutos li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de ação na lista */
+#listaProdutos button {
+    background-color: #f2a285; /* Cor para ações como editar/excluir */
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+#listaProdutos button:hover {
+    background-color: #f2cf66; /* Cor ao passar o mouse */
+}
+
+/* Mensagem de carregamento */
+#loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 20%;
+}

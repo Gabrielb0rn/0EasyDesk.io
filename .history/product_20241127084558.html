@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyDesk</title>
+    <link rel="stylesheet" href="assets\.css\main.css">
+    <link rel="stylesheet" href="assets\.css\components\product\product.css">
+    <link rel="stylesheet" href="assets\.css\components\cadastro-produto\index.css">
+    <link rel="shortcut icon" href="assets\.css\favicon\EasyDeskLogo.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left-section">
+                <div class="logo">
+                    <a href="index.html"><img src="assets\.css\favicon\EasyDeskLogo.ico" alt="Logo EasyDesk"></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <img src="assets\.css\icons\nav\about-svgrepo-com.svg" alt="Sobre Nós">
+                        <a href="about.html">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\services-20px-svgrepo-com.svg" alt="Serviços">
+                        <a href="services.html">Serviços</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\prices-svgrepo-com.svg" alt="Preços / Planos">
+                        <a href="prices.html">Preços / Planos</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\shopping-bags-shopping-bag-svgrepo-com.svg" alt="Produtos">
+                        <a href="product.html">Produtos</a>
+                    </li>
+                    <li>
+                        <img src="assets\.css\icons\nav\contact-us-filled-svgrepo-com.svg" alt="Nos contate">
+                        <a href="contactus.html">Nos contate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="auth-buttons" id="auth-section">
+                <div class="theme-toggle">
+                    <img src="assets\.css\icons\nav\bright-sun-light-svgrepo-com.svg" alt="Mudar Tema" onclick="toggleTheme()">
+                </div>
+                
+                <a href="login.html"><button class="sign-in">Login</button></a>
+                <a href="register.html"><button>Register</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="cart-icon" class="cart-icon">
+            🛒 <!-- Ícone do carrinho -->
+          </div>
+          <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Carrinho</h2>
+              <button id="close-cart" class="close-cart">✖</button>
+            </div>
+            <ul id="cart-items" class="cart-items">
+              <!-- Itens adicionados ao carrinho aparecerão aqui -->
+            </ul>
+            
+            <div class="cart-footer">
+              <button class="checkout" class="checkout-btn">Finalizar Compra</button>
+              <p class>Total: R$<span class="cart-total">0.00</span></p>  
+            </div>
+          </div>
+        <div id="produtos">
+            <h2>Recém-adicionados</h2>
+            <div class="product-container">
+                <ul id="listaProdutos" class="product-card"></ul>
+                <!-- Produtos adicionados pelo administrador (admin.html) -->
+            </div>
+            <h2>Monitores</h2>
+            <div class="product-container">
+                <div class="product-card" data-id="1" data-name="Monitor 1" data-price="99.99">
+                    <img src="assets/css/images/product/monitor/monitor3.png" alt="Monitor 1" class="product-image">
+                    <h2 class="product-title">Monitor Gamer Acer </h2>
+                    <p class="product-price">R$ 99,99</p>
+                    <button class="add-to-cart">Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Monitor 2" data-price="149.99">
+                    <img src="assets/css/images/product/monitor/monitor3.png" alt="Monitor 2" class="product-image">
+                    <h2 class="product-title">Monitor 2</h2>
+                    <p class="product-price">R$ 149,99</p>
+                    <button class="add-to-cart">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script src="assets\,js\modules\cadastro-produto\index.js"></script>
+    <script src="assets\,js\modules\product\product.js"></script>
+        <script src="assets\,js\main.js"></script>
+</body>
+</html>
